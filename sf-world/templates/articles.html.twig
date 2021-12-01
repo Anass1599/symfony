@@ -1,0 +1,24 @@
+{% extends "base.html.twig" %}
+{% block title %}{{ parent()}}Articles{% endblock %}
+{% block main %}
+    <section>
+        {% for article in articles %}
+            {% if article.isPublished %}
+                <article>
+                    <div class="img">
+                        <img src="{{ asset(article.image) }}" alt="">
+                    </div>
+                    <div class="containt">
+                        <h2>{{ article.title }}</h2>
+                        <p>{{ article.content }}</p>
+                    </div>
+                    {# avec la methode path je cree un url article plus l'id de l'article recuperer dans l'url. #}
+                    <a class="btn" href="{{ path('article', {'id' : article.id}) }}">VOIR + </a>
+                </article>
+            {% endif %}
+        {% endfor %}
+    </section>
+{% endblock %}
+
+
+

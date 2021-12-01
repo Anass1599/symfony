@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+    <title>{% block title %}WORLD{% endblock %}</title>
+</head>
+
+<body>
+
+<header class="header">
+    <div class="img1">
+        <img class="icon" src="https://www.ycr76.fr/sites/default/files/monde.png">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="{{ path("home") }}">Home</a></li>
+            <li><a href="{{ path("articles") }}">Articles</a></li>
+            <li><a href="{{ path("contact") }}">Contact</a></li>
+        </ul>
+    </nav>
+</header>

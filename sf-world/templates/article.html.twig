@@ -1,0 +1,17 @@
+{% extends "base.html.twig" %}
+{% block title %}{{ parent()}}{{ article.title }}{% endblock %}
+{% block main %}
+    <section>
+
+        <article>
+            <div class="img">
+                <img src="{{ asset(article.image) }}" alt="">
+            </div>
+            <div class="containt">
+                <h2>{{ article.title }}</h2>
+                <p>{{ article.content }}</p>
+            </div>
+        </article>
+
+    </section>
+{% endblock %}
